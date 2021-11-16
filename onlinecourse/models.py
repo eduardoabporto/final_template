@@ -101,7 +101,6 @@ class Enrollment(models.Model):
     # Has a grade point for each question
     # Has question content
     # Other fields and methods you would like to design
-#LAB 2 Step 3 ---------------------------------------------------------------------
 class Question(models.Model):
     # Foreign key to lesson
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
@@ -126,7 +125,6 @@ class Question(models.Model):
     # Choice content
     # Indicate if this choice of the question is a correct one or not
     # Other fields and methods you would like to design
-#LAB 2 Step 3-----------------------------------------------------------------------
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     choice_text = models.CharField(max_length=300, default=" ")
